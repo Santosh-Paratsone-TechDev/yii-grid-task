@@ -89,32 +89,27 @@ class GridConfigService {
             : $rows;
     }
 
-    public function saveUserGridConfig(
-        int $userId,
-        string $gridKey,
-        array $columns
-    ): void {
+public function saveUserGridConfig(
+    int $userId,
+    string $gridKey,
+    array $columns
+): void {
 
-        GridConfigurations::deleteAll([
+    foreach ($columns as $col) {
+
+        $model = GridConfigurations::findOne([
             'user_id' => $userId,
-            'grid_key' => $gridKey
+            'grid_key' => $gridKey,
+            'column_name' => $col['column_name']
         ]);
 
-        foreach ($columns as $col) {
-
-            $model = new GridConfigurations();
-
-            $model->user_id = $userId;
-            $model->grid_key = $gridKey;
-            $model->column_name = $col['column_name'];
-            $model->display_name = $col['display_name'] ?? null;
-            $model->is_visible = (int)($col['is_visible'] ?? 1);
-
-            if (!$model->save()) {
-                throw new \RuntimeException(
-                    json_encode($model->errors)
-                );
-            }
+        if (!$model) {
+            continue;
         }
+
+        $model->updateAttributes([
+            'is_visible' => (int) ($col['is_visible'] ?? 1),
+        ]);
     }
+}
 }

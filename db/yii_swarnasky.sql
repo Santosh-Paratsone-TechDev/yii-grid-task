@@ -299,19 +299,19 @@ CREATE TABLE `grid_configurations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `grid_configurations` (`id`, `user_id`, `grid_key`, `column_name`, `display_name`, `is_visible`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
-(157,	1,	'claims-main-grid',	'file_number',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(158,	1,	'claims-main-grid',	'manager_name',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(159,	1,	'claims-main-grid',	'service_provider_name',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(160,	1,	'claims-main-grid',	'claim_number',	NULL,	0,	NULL,	NULL,	NULL,	NULL),
-(161,	1,	'claims-main-grid',	'assignment_id',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(162,	1,	'claims-main-grid',	'company_name',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(163,	1,	'claims-main-grid',	'invoice_date',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(164,	1,	'claims-main-grid',	'expenses',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(165,	1,	'claims-main-grid',	'sale_tax',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(166,	1,	'claims-main-grid',	'payment_amount',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(167,	1,	'claims-main-grid',	'balance_amount',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(168,	1,	'claims-main-grid',	'payment_date',	NULL,	1,	NULL,	NULL,	NULL,	NULL),
-(169,	1,	'claims-main-grid',	'loss_amount',	NULL,	1,	NULL,	NULL,	NULL,	NULL);
+(1, 1,	'claims-main-grid',	'file_number',	'File Number',	1,	NULL,	NULL,	NULL,	NULL),
+(2, 1,	'claims-main-grid',	'manager_name',	'Manager Name',	1,	NULL,	NULL,	NULL,	NULL),
+(3, 1,	'claims-main-grid',	'service_provider_name',	'Service Provider Name',	1,	NULL,	NULL,	NULL,	NULL),
+(4, 1,	'claims-main-grid',	'claim_number',	'Claim Number',	0,	NULL,	NULL,	NULL,	NULL),
+(5, 1,	'claims-main-grid',	'assignment_id',	'Assignment ID',	1,	NULL,	NULL,	NULL,	NULL),
+(6, 1,	'claims-main-grid',	'company_name',	'Company Name',	1,	NULL,	NULL,	NULL,	NULL),
+(7, 1,	'claims-main-grid',	'invoice_date',	'Invoice Date',	1,	NULL,	NULL,	NULL,	NULL),
+(8, 1,	'claims-main-grid',	'expenses',	'Expenses',	1,	NULL,	NULL,	NULL,	NULL),
+(9, 1,	'claims-main-grid',	'sale_tax',	'Sale Tax',	1,	NULL,	NULL,	NULL,	NULL),
+(10, 1,	'claims-main-grid',	'payment_amount',	'Payment Amount',	1,	NULL,	NULL,	NULL,	NULL),
+(11, 1,	'claims-main-grid',	'balance_amount',	'Balance Amount',	1,	NULL,	NULL,	NULL,	NULL),
+(12, 1,	'claims-main-grid',	'payment_date',	'Payment Date',	1,	NULL,	NULL,	NULL, NULL),
+(13, 1,	'claims-main-grid',	'loss_amount',	'Loss Amount',	1, NULL, NULL, NULL, NULL);
 
 DROP TABLE IF EXISTS `migration`;
 CREATE TABLE `migration` (
